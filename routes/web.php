@@ -37,3 +37,7 @@ Route::group(['middleware' => ['auth']], function () {
     // Route::post('users_mass_destroy', ['uses' => 'Admin\UsersController@massDestroy', 'as' => 'users.mass_destroy']);
 
 });
+
+Route::group(['middleware' => ['auth']], function () {    
+    Route::resource('departments', 'DepartmentController');
+});
